@@ -1,0 +1,10 @@
+
+Pre-Requisites:
+GCP Account is required.
+Follow the below process:
+To obtain client credentials for Google OAuth2 authentication, head on over to the Google API Console – section “Credentials”.
+Here we'll create credentials of type “OAuth2 Client ID” for our web application. This results in Google setting up a client id and secret for us.
+We also have to configure an authorized redirect URI in the Google Console, which is the path that users will be redirected to after they successfully login with Google.
+By default, Spring Boot configures this redirect URI as /login/oauth2/code/{registrationId}. Therefore, for Google we'll add the URI:
+
+http://localhost:8081/login/oauth2/code/google
